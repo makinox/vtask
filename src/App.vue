@@ -1,9 +1,11 @@
 <template>
+  <Nab />
   <Search v-on:handle-search="handleSearch" />
   <Table :stages="['Idea', 'Development', 'QA', 'Production']" :state="state" />
 </template>
 
 <script>
+import Nab from './components/Nab/Nab.vue';
 import Search from './components/Search/Search.vue';
 import Table from './components/Table/Table.vue';
 
@@ -12,6 +14,7 @@ export default {
   components: {
     Search,
     Table,
+    Nab,
   },
   methods: {
     handleSearch(search) {

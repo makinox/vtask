@@ -1,9 +1,9 @@
 <template>
-  <nav>
+  <section>
     <form v-on:submit.prevent="handleSubmit">
-      <input v-model="search" type="text" />
+      <input v-model="search" type="text" placeholder="Sumbit a task" />
     </form>
-  </nav>
+  </section>
 </template>
 
 <script>
@@ -27,3 +27,27 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+section {
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  display: flex;
+}
+
+section input {
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+}
+
+section input:hover,
+section input:focus,
+section input:active {
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.08);
+  outline: none;
+  border: none;
+}
+</style>
