@@ -1,30 +1,50 @@
 <template>
-  <span v-if="element?.name" @click="handleClick">{{ element?.name || 'Em' }}</span>
+  <span v-if="element?.name" @click.left="handleClick(true)" @click.right="handleClick(false)">{{ element?.name || 'Em' }}</span>
 </template>
 
 <script>
-/* eslint-disable vue/no-mutating-props */
 export default {
   props: {
     element: Object,
   },
   methods: {
-    handleClick() {
-      switch (this.element.stages) {
-        case 'Idea':
-          this.element.stages = 'Development';
-          break;
-        case 'Development':
-          this.element.stages = 'QA';
-          break;
-        case 'QA':
-          this.element.stages = 'Production';
-          break;
-        case 'Production':
-          this.element.stages = 'Idea';
-          break;
-        default:
-          break;
+    handleClick(left) {
+      if (left) {
+        const mutedElement = this.element;
+        switch (this.element.stages) {
+          case 'Idea':
+            mutedElement.stages = 'Development';
+            break;
+          case 'Development':
+            mutedElement.stages = 'QA';
+            break;
+          case 'QA':
+            mutedElement.stages = 'Production';
+            break;
+          case 'Production':
+            mutedElement.stages = 'Idea';
+            break;
+          default:
+            break;
+        }
+      } else {
+        const mutedElement = this.element;
+        switch (this.element.stages) {
+          case 'Idea':
+            mutedElement.stages = 'Production';
+            break;
+          case 'Development':
+            mutedElement.stages = 'Idea';
+            break;
+          case 'QA':
+            mutedElement.stages = 'Development';
+            break;
+          case 'Production':
+            mutedElement.stages = 'QA';
+            break;
+          default:
+            break;
+        }
       }
     },
   },
