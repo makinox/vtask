@@ -1,16 +1,16 @@
 <template>
-  <Navbar v-on:handle-search="handleSearch" />
+  <Search v-on:handle-search="handleSearch" />
   <Table :stages="['Idea', 'Development', 'QA', 'Production']" :state="state" />
 </template>
 
 <script>
-import Navbar from './components/Navbar/Navbar.vue';
+import Search from './components/Search/Search.vue';
 import Table from './components/Table/Table.vue';
 
 export default {
   name: 'App',
   components: {
-    Navbar,
+    Search,
     Table,
   },
   methods: {
