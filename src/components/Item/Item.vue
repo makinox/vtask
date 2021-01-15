@@ -9,7 +9,22 @@ export default {
   },
   methods: {
     handleClick() {
-      this.element.stages = 'Development';
+      switch (this.element.stages) {
+        case 'Idea':
+          this.element.stages = 'Development';
+          break;
+        case 'Development':
+          this.element.stages = 'QA';
+          break;
+        case 'QA':
+          this.element.stages = 'Production';
+          break;
+        case 'Production':
+          this.element.stages = 'Idea';
+          break;
+        default:
+          break;
+      }
     },
   },
 };

@@ -4,14 +4,12 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
 import Navbar from './components/navbar/navbar.vue';
 import Table from './components/Table/Table.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     Navbar,
     Table,
   },

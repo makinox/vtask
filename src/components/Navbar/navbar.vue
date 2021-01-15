@@ -1,24 +1,29 @@
 <template>
   <nav>
-    <input v-model="search" type="text">
-    <button @click="handleSearch">Search</button>
+    <form v-on:submit.prevent="handleSubmit">
+      <input v-model="search" type="text" />
+    </form>
   </nav>
 </template>
 
 <script>
 export default {
   props: {
-    msg: String
+    msg: String,
   },
   data() {
     return {
-      search: ''
-    }
+      search: '',
+    };
   },
   methods: {
-    handleSearch() {
-      this.$emit('handleSearch',this.search)
-    }
-  }
-}
+    // handleSearch() {
+    //   this.$emit('handleSearch', this.search);
+    // },
+    handleSubmit(e) {
+      e.preventDefault();
+      this.$emit('handleSearch', this.search);
+    },
+  },
+};
 </script>
