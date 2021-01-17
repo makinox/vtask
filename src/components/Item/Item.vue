@@ -53,7 +53,7 @@ export default {
 
 <style scoped>
 span {
-  border: 1px #555555 solid;
+  border: 1px #dddddd solid;
   display: inline-block;
   border-radius: 5px;
   padding: 3px 10px;

@@ -38,6 +38,7 @@ section {
 
 section input {
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease 0s;
   border-radius: 20px;
   padding: 10px;
   border: none;

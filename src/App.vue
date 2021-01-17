@@ -1,7 +1,7 @@
 <template>
   <Nab />
   <Search v-on:handle-search="handleSearch" />
-  <Table :stages="['Idea', 'Development', 'QA', 'Production']" :state="state" />
+  <Table :stages="['Backlog', 'Development', 'QA', 'Production']" :state="state" />
 </template>
 
 <script>
