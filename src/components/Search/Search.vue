@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="search-section">
     <form v-on:submit.prevent="handleSubmit">
       <input v-model="search" type="text" placeholder="Sumbit a task" />
     </form>
