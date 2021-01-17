@@ -2,7 +2,8 @@
   <nav>
     <section>
       <div>
-        <span>nake game</span>
+        <img src="../../assets/logo.png" alt="Vtask logo" />
+        <span>task</span>
       </div>
 
       <div>
@@ -45,7 +46,8 @@ nav section div:first-of-type {
 }
 
 nav section div:first-of-type img {
-  height: 60px;
+  height: 30px;
+  padding: 10px 0;
 }
 
 nav section div:first-of-type span {
@@ -58,13 +60,13 @@ nav section div:last-of-type a {
 
 nav section div:last-of-type i {
   transition: all 0.3s ease 0s;
-  color: #ff0000;
+  color: #40b983;
   cursor: pointer;
   font-size: 20px;
   margin: 0 2px;
 }
 
 nav section div:last-of-type i:hover {
-  color: #00ff00;
+  color: #35495e;
 }
 </style>

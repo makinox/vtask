@@ -1,5 +1,7 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import './index.css'
+import {createApp} from 'vue';
+import Helmet from './components/Helmet/Helmet.js';
+import App from './App.vue';
+import './index.css';
 
-createApp(App).mount('#app')
+Helmet();
+createApp(App).mount('#app');
