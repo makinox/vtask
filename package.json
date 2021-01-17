@@ -24,6 +24,7 @@
     "babel-eslint": "^10.1.0",
     "cypress": "^6.2.1",
     "eslint": "^6.7.2",
+    "eslint-plugin-cypress": "^2.11.2",
     "eslint-plugin-vue": "^7.0.0-0",
     "serve": "^11.3.2",
     "start-server-and-test": "^1.11.7"
